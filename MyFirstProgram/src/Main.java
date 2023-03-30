@@ -1,19 +1,15 @@
-import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		Random random = new Random();
 		
-		System.out.println("Let's figure out the hipotenuse of your triangle");
-		System.out.println("Enter side x: ");
-		double x = scanner.nextDouble();
+		//int x = random.nextInt(5)+1;
+		//double y = random.nextDouble();
+		boolean z = random.nextBoolean();
 		
-		System.out.println("Enter side y: ");
-		double y = scanner.nextDouble();
-		
-		double z = Math.sqrt((x*x)+(y*y));
-		System.out.println("The hipotenuse of your triangle is: "+z);
+		System.out.println(z);
 		
 	}
 
