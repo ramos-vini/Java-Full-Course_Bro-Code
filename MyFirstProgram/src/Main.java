@@ -1,11 +1,16 @@
+import javax.swing.JOptionPane;
+
 public class Main {
 
 	public static void main(String[] args) {
-		int friends = 10;
+		String name = JOptionPane.showInputDialog("Hey there! What's your name?");
+		JOptionPane.showMessageDialog(null, "Hello "+name+"!");
 		
-		friends += 5;
+		int age = Integer.parseInt(JOptionPane.showInputDialog("How old are you?"));
+		JOptionPane.showMessageDialog(null, "Your age is: " +age);
 		
-		System.out.println("I now have: " + friends + " friends");
+		double height = Double.parseDouble(JOptionPane.showInputDialog("What is your height (m)?"));
+		JOptionPane.showMessageDialog(null, "You are "+height+ "m tall");
 		
 	}
 
