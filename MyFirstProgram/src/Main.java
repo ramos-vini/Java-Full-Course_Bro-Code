@@ -1,15 +1,27 @@
-import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Random random = new Random();
+		Scanner scanner = new Scanner(System.in);
 		
-		//int x = random.nextInt(5)+1;
-		//double y = random.nextDouble();
-		boolean z = random.nextBoolean();
+		System.out.println("How old are you?");
+		int age = scanner.nextInt();
 		
-		System.out.println(z);
+		if (age < 12) {
+			System.out.println("You're gonna be the next Bill Gates, my little friend.");
+		}
+		else if(age < 18) {
+			System.out.println("Really good, my friend! You will have a wonderfull carrier!");
+		}
+		else if (age < 65) {
+			System.out.println("Nice! Keep working on your Java skills!");
+		}
+		else {
+			System.out.println("It's never late to learn Java! Keep going :)");
+		}
+		
+		scanner.close();
 		
 	}
 
