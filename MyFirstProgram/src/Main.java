@@ -1,18 +1,24 @@
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		String x = "Water";
-		String y = "Juice";
+		Scanner scanner = new Scanner(System.in);
 		
-		String temp;
+		System.out.println("Hello! What's your name?");
+		String name = scanner.nextLine();
 		
-		temp = x;
-		x = y;
-		y = temp;
+		System.out.println("Cool name! How old are you?");
+		int age = scanner.nextInt();
+		scanner.nextLine();
 		
-		System.out.println("x: " + x);
-		System.out.println("y: " + y);
+		System.out.println("And what's your favorite food?");
+		String food = scanner.nextLine();
+		
+		System.out.println("Your name is: " + name);
+		System.out.println("You are " + age + " years old");
+		System.out.println("And your favorite food is " + food);
+		
 	}
 
 }
