@@ -1,27 +1,25 @@
-import java.util.Scanner;
-
 public class Main {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		String RockPaperScissor = "Scissor";
 		
-		System.out.println("How old are you?");
-		int age = scanner.nextInt();
+		switch (RockPaperScissor) {
+		case "Rock":
+			System.out.println("You chose Rock");
+			break;
 		
-		if (age < 12) {
-			System.out.println("You're gonna be the next Bill Gates, my little friend.");
+		case "Paper":
+			System.out.println("You chose Paper");
+			break;
+			
+		case "Scissor":
+			System.out.println("You chose Scissor");
+			break;	
+
+		default:
+			System.out.println("You must choose between either Rock, Paper or Scissor.");
+			break;
 		}
-		else if(age < 18) {
-			System.out.println("Really good, my friend! You will have a wonderfull carrier!");
-		}
-		else if (age < 65) {
-			System.out.println("Nice! Keep working on your Java skills!");
-		}
-		else {
-			System.out.println("It's never late to learn Java! Keep going :)");
-		}
-		
-		scanner.close();
 		
 	}
 
