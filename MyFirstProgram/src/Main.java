@@ -1,16 +1,19 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		String name = JOptionPane.showInputDialog("Hey there! What's your name?");
-		JOptionPane.showMessageDialog(null, "Hello "+name+"!");
+		Scanner scanner = new Scanner(System.in);
 		
-		int age = Integer.parseInt(JOptionPane.showInputDialog("How old are you?"));
-		JOptionPane.showMessageDialog(null, "Your age is: " +age);
+		System.out.println("Let's figure out the hipotenuse of your triangle");
+		System.out.println("Enter side x: ");
+		double x = scanner.nextDouble();
 		
-		double height = Double.parseDouble(JOptionPane.showInputDialog("What is your height (m)?"));
-		JOptionPane.showMessageDialog(null, "You are "+height+ "m tall");
+		System.out.println("Enter side y: ");
+		double y = scanner.nextDouble();
+		
+		double z = Math.sqrt((x*x)+(y*y));
+		System.out.println("The hipotenuse of your triangle is: "+z);
 		
 	}
 
