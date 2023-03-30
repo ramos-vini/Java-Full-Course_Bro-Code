@@ -1,26 +1,33 @@
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
-		String RockPaperScissor = "Scissor";
+		// &&, ||, !
 		
-		switch (RockPaperScissor) {
-		case "Rock":
-			System.out.println("You chose Rock");
-			break;
+		Scanner scanner = new Scanner(System.in);
 		
-		case "Paper":
-			System.out.println("You chose Paper");
-			break;
-			
-		case "Scissor":
-			System.out.println("You chose Scissor");
-			break;	
-
-		default:
-			System.out.println("You must choose between either Rock, Paper or Scissor.");
-			break;
+		System.out.println("You're playing a game. Press \"q\" or \"Q\" to quit.");
+		String res = scanner.nextLine();
+		
+		if(res.equals("q") || res.equals("Q")) {
+			System.out.println("You quit the game.");
+		}
+		else {
+			System.out.println("You're still in the game.");
 		}
 		
+		/*
+		 * if(!res.equals("q") && !res.equals("Q")) {
+		
+			System.out.println("You're still in the game.");
+		}
+		else {
+			System.out.println("You quit the game.");
+		}
+		*/
+		
+		scanner.close();
+		
 	}
-
 }
