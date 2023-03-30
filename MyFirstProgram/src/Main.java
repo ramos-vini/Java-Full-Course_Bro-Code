@@ -2,16 +2,17 @@
 public class Main {
 
 	public static void main(String[] args) {
-		int x = 50;
-		float y = 4.37f;
-		double z = 67.897365;
+		String x = "Water";
+		String y = "Juice";
 		
-		System.out.println("Printing some variables:");
-		System.out.println(x + " & " + y + " & " + z);
+		String temp;
 		
-		long bigNumber = 3456789121454598383l;
-		char symbol = '@';
-		String phrase = "A lot of chars together.";
+		temp = x;
+		x = y;
+		y = temp;
+		
+		System.out.println("x: " + x);
+		System.out.println("y: " + y);
 	}
 
 }
