@@ -3,31 +3,15 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		// &&, ||, !
-		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("You're playing a game. Press \"q\" or \"Q\" to quit.");
-		String res = scanner.nextLine();
+		String name = "";
 		
-		if(res.equals("q") || res.equals("Q")) {
-			System.out.println("You quit the game.");
-		}
-		else {
-			System.out.println("You're still in the game.");
-		}
+		do {	
+			System.out.println("Hello! What's your name?");
+			name = scanner.nextLine();
+		} while(name == "");
 		
-		/*
-		 * if(!res.equals("q") && !res.equals("Q")) {
-		
-			System.out.println("You're still in the game.");
-		}
-		else {
-			System.out.println("You quit the game.");
-		}
-		*/
-		
-		scanner.close();
-		
+		System.out.println("Nice to meet you, "+name+"!");
 	}
 }
