@@ -6,26 +6,58 @@ public class Main {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Let's build a rectangle");
+		System.out.println("Let's create a tree!\nType in a symbol for it.");
 		
-		System.out.println("Enter # of rows");
-		int rows = scanner.nextInt();
+		String symbol = scanner.nextLine();
 		
-		System.out.println("Enter # of columns");
-		int columns = scanner.nextInt();
+		System.out.println("Great! Now choose the number of branches of your tree.");
 		
-		System.out.println("Enter a symbol");
-		String symbol = scanner.next();
+		int branches = scanner.nextInt();
 		
-		System.out.println("Great! Here's your rectangle:");
+		int symbolNumber = 1;
 		
-		for(int i=1; i<=rows; i++) {
-			System.out.println();
+		// Tree Branches:
+		
+		for(int i = 0; i < branches; i++) {
 			
-			for(int j = 1; j<=columns; j++) {
+			int blankNumber = branches-1-i;
+			
+			for (int j = 0; j < blankNumber; j++) {
+				System.out.print(" ");
+			}
+			
+			for (int j = 0; j < symbolNumber; j++) {
 				System.out.print(symbol);
 			}
+			
+			for (int j = 0; j < blankNumber; j++) {
+				System.out.print(" ");
+			}
+				
+			System.out.println();
+			
+			symbolNumber += 2;
 		}
+		
+		// Tree's stem:
+		
+		for(int i = 0; i < (Math.round(branches/2)); i++) {
+			// branches - 1 then 1 then branches -1
+			
+			for (int j = 0; j < branches-1; j++) {
+				System.out.print(" ");
+			}
+			
+			System.out.print(symbol);
+			
+			for (int j = 0; j < branches-1; j++) {
+				System.out.print(" ");
+			}
+			
+			System.out.println();
+		}
+		
+		scanner.close();
 		
 	}
 }
