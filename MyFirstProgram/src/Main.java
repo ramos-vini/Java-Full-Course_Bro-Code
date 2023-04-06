@@ -2,16 +2,17 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		String name = "Bro";
+		// Wrapper Class (reference type) // Primitive Type  
 		
-		//boolean result = name.equals("bro");
-		//boolean result = name.equalsIgnoreCase("bro");
-		//char result = name.charAt(0);
-		//int result = name.indexOf("r");
-		//String result = name.replace("o", "a");
-		String result = name.trim();
+		Integer a = 123; // int
+		Character b = '@'; // char
+		Boolean c = true; // boolean
+		Double d = 3.14; // double
 		
-		System.out.println(result);
+		System.out.println(c.toString().substring(2));
+		
+		
+		
 		
 	}
 }
