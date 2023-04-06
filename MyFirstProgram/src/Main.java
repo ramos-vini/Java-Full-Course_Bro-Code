@@ -1,18 +1,24 @@
+import java.util.ArrayList;
+
 public class Main {
 
 	public static void main(String[] args) {
 		
-		// Wrapper Class (reference type) // Primitive Type  
+		ArrayList<String> foods = new ArrayList<String>();
 		
-		Integer a = 123; // int
-		Character b = '@'; // char
-		Boolean c = true; // boolean
-		Double d = 3.14; // double
+		foods.add("sushi");
+		foods.add("hotdog");
+		foods.add("hamburger");
 		
-		System.out.println(c.toString().substring(2));
+		foods.remove(0);
+		foods.set(1, "pizza");
+		foods.add(1, "döner");
+		// foods.clear();
 		
 		
-		
+		for(int i=0; i<foods.size(); i++) {
+			System.out.println(foods.get(i));
+		}
 		
 	}
 }
