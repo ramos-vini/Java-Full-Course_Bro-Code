@@ -4,22 +4,21 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		String[] animals = {"cat", "dog", "bird", "fish"};
+		String name = "Bro";
 		
-		for(String animal : animals) {
-			System.out.println(animal);
-		}
+		hello(name, 21);
 		
-		System.out.println("--------");
+		System.out.println(add(2,3));
+	}
+	
+	static void hello(String p1, int p2) {
+		System.out.println("Hello "+p1+", you're "+p2);
+	}
+	
+	static int add(int p1, int p2) {
 		
-		ArrayList<String> sports = new ArrayList<>();
+		int sum = p1+p2;
 		
-		sports.add("soccer");
-		sports.add("tennis");
-		sports.add("mma");
-		
-		for(String sport : sports) {
-			System.out.println(sports.indexOf(sport));
-		}
+		return sum;
 	}
 }
