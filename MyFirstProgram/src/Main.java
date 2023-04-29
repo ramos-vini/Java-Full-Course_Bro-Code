@@ -1,16 +1,10 @@
 public class Main {
 
 	public static void main(String[] args) {
-		Car myCar = new Car();
+		Animal animal = new Animal();
+		animal.speak();
 		
-		Bicycle myBike = new Bicycle();
-		
-		System.out.println("My car has "+myCar.wheels+ " wheels.");
-		myCar.go();
-		
-		System.out.println();
-		
-		System.out.println("My bike has "+myBike.pedals+" pedals.");
-		myBike.stop();
+		Dog dog = new Dog();
+		dog.speak();
 	}
 }
