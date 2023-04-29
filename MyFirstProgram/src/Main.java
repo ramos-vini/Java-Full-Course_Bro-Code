@@ -1,13 +1,16 @@
 public class Main {
 
 	public static void main(String[] args) {
+		Car myCar = new Car();
 		
-		Friend friend1 = new Friend("Spongebob");
-		Friend friend2 = new Friend("Patrick");
-		Friend friend3 = new Friend("Squidward");
+		Bicycle myBike = new Bicycle();
 		
-		Friend.printFriendsNumber();
+		System.out.println("My car has "+myCar.wheels+ " wheels.");
+		myCar.go();
 		
-		System.out.println(Friend.number);
+		System.out.println();
+		
+		System.out.println("My bike has "+myBike.pedals+" pedals.");
+		myBike.stop();
 	}
 }
