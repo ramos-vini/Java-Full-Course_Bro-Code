@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Main {
 
@@ -6,29 +7,26 @@ public class Main {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		Animal animal;
-		
-		System.out.println("Choose your animal:");
-		System.out.println("Type \"1\" for Dog");
-		System.out.println("Type \"2\" for Cat");
-		
-		int choice = scanner.nextInt();
-		
-		if(choice == 1) {
-			animal = new Dog();
-			animal.talk();
+		try {
+			System.out.println("Choose a whole number do be divided");
+			int n1 = scanner.nextInt();
+			
+			System.out.println("Now choose a whole number to divide by");
+			int n2 = scanner.nextInt();
+			
+			System.out.println("Result: "+n1+"/"+n2+" = "+n1/n2);	
 		}
-		else if(choice == 2) {
-			animal = new Cat();
-			animal.talk();
+		catch(ArithmeticException e) {
+			System.out.println("Error: Arithmetic Exception");
 		}
-		else {
-			System.out.println("Invalid number.");
-			animal = new Animal();
-			animal.talk();
+		catch(InputMismatchException e) {
+			System.out.println("Error: Input Mismatch Exception");
 		}
-		
-		scanner.close();
-		
+		catch(Exception e) {
+			System.out.println("Error");
+		}
+		finally {
+			scanner.close();
+		}
 	}
 }
